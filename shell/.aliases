@@ -1,24 +1,19 @@
 # PHP
-alias phpunit="vendor/bin/phpunit"
-alias phpunitw="phpunit-watcher watch"
-alias a="php artisan"
-alias c="composer"
-alias cu="composer update"
-alias cr="composer require"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
-alias hostfile="sudo vi /etc/hosts"
-alias deploy='envoy run deploy'
-alias deploy-code='envoy run deploy-code'
-alias mfs='php artisan migrate:fresh --seed'
-alias nah='git reset --hard;git clean -df'
-alias p="phpunit"
-alias pf="phpunit --filter "
-alias d="php artisan dusk"
+alias p="./vendor/bin/phpunit && ./vendor/bin/php-cs-fixer fix && ./vendor/bin/psalm --show-info=false --no-cache && php artisan code:analyse"
+alias pf="./vendor/bin/phpunit --filter"
+alias art="php artisan"
+alias migrate="php artisan migrate"
+alias lang="art lang:generate"
+alias yrp="yarn run production"
+alias yrw="yarn run watch"
+alias setup="php artisan setup:test"
+alias wip="git add . && git commit -m 'wip'"
+alias gb="git branch -D"
+alias gs='git status -s'
+alias gp='git pull --rebase'
 alias sshconfig="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias sail='./vendor/bin/sail'
-
 
 # JavaScript
 alias jest="./node_modules/.bin/jest"
